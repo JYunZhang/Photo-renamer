@@ -1,0 +1,36 @@
+Class: FileNode
+File: FileNode.java
+
+Overall comment for FileNode class:
+This class is used to convert a file to a FileNode, which has some basic methods such as findChild, addChild and buildTree. Moreover, it has some specific methods for this program, such as findFileExtension, buildTreeWithImages and findImagesWithTag. This class’s design is neat and comfortable to read and the comment of the code is clear, which helps me to understand the code faster.
+
+Partial comment for the code in FileNode class:
+
+1. In line 19, the variable type has the same name with the instance in the line 224, which is confusing to me. Do you think it is better to change the name for the instance in line 224?
+
+2. In line 29, the types of images cover almost all the basic images. That makes the program more user-friendly and more professional.
+
+3. I think it is methodic in the findChild method to divide it into two cases, whether the child in the direct children or not. However, don’t you think it is more simple to just recursively findChild for every children in this root?
+
+4. Regarding to the isDirectory method, I would like to suggest that there can be an “isImage” method which can make the buildTreeWithImages method simpler.
+
+5. In the findFileExtension method, from line 191 to line 195 is to find the “.” in the file’s name. However, do you think it is simpler to use “file.getName().index(“.”)” instead of using for loop?
+
+6. It is ingenious to use a boolean “stop” to control the while loop in the findFileExtension method.
+
+7. There is no introduction for the method buildTreeWithImages which makes me confuse about the return value. (line215) Because the method’s name is “buildTreeWithImage” which seems it is a method should return nothing instead of ArrayList<PhotoNode>.
+
+8. From my perspective, use “extension.toLowerCase in image_filetypes” instead of use for loop to check if the file is image, From line 232 to line 234, would be better.
+
+9. In line 248, 263, 273, I think if the comment was in one or two lines would be better for reading.
+
+10. In line 282, there is no introduction for the method openInFinder() and the return value confuses me because the method is called “openInFinder” but return a String.
+
+11. From the line 286 to 292, I think the javadoc, which seems belong to the main method instead of findImagesWithTag, was placed in the wrong position.
+
+12. For the method “findImagesWithTag” in line 293, is it suppose to return an empty ArrayList<PhotoNode> anyway? 
+
+13. In line 304, I think printing all the images in the folder is a good way to test the method, because we can see the result.
+
+14. In line 306, what is the reason that the folder’s absolute path should be printed?
+
